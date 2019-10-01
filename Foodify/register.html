@@ -1,0 +1,176 @@
+<!DOCTYPE HTML>
+<head>
+      <title>
+Foodify
+     </title>
+
+<link href="wt1.css" rel="stylesheet" text="text/css">
+   
+ <script type="text/javascript" language="javascript">
+	 
+	
+	 function formValidate()
+{
+	var verify=true;
+	 var letters = /^[A-Za-z]+$/;  
+	var passw=  /^[A-Za-z]\w{6,15}$/; 
+	 var numbers = /^[0-9]+$/;  
+	  var phoneno = /^\d{10}$/; 
+	var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;  
+	var x=document.forms["form"]["firstname"].value;
+    if (x == null || x == "") 
+	{
+	alert("First name must be filled out");
+	verify=false;
+	}
+	if(!x.match(letters))
+{
+	alert("First name must have characters only");
+	verify=false;
+}
+	if(x.length<=0 || x.length>=20)
+{
+	alert("Please input the first name between 0 and 20 characters");
+	verify=false;
+}
+
+	var y = document.forms["form"]["lastname"].value;
+	if(!y.match(letters))
+{
+	alert("Last name must have characters only");
+	verify=false;
+}
+	if(y.length<=0 || y.length>=20)
+{
+	alert("Please input the last name between 0 and 20 characters");
+	verify=false;
+	}
+
+var z = document.forms["form"]["contact"].value;
+    if (z == null || z == "") 
+{
+	alert("Contact number must be filled out");
+	verify=false;
+}
+	if(!z.match(phoneno))
+{
+	alert("Contact number is invalid");
+	verify=false;
+}
+	
+var a = document.forms["form"]["email"].value;
+    if (a==null || a=="") 
+{
+	alert("Email must be filled out");
+	verify=false;
+}
+	if(!a.match(mailformat))
+{
+	alert("Email is invalid");
+	verify=false;
+}
+
+var b = document.forms["form"]["username"].value;
+    if (b=="" || b==null) 
+{
+	alert("Username must be filled out");
+	verify=false;
+}
+
+
+	var c = document.forms["form"]["password"].value;
+    if (c=="" || c==null) 
+{
+	alert("Password must be filled out");
+	verify=false;
+}
+	if(!c.match(passw))
+{
+	alert("Password must be of minimum length 6 and maximum length 15 \n Password can have any word or non-word character");
+	verify=false;
+}
+	if(verify==true)
+	{
+	alert("Thank you for registering with us.")
+	}
+}
+
+</script>
+
+
+
+</head>
+<body>
+<header>
+<div class="logo">
+<img src="Foodify-slide-1.jpg" />
+</div>
+<div class="nvbar">
+<ul>
+<li><a href="home.html">HOME</a></li>
+<li><a href="register.html">REGISTER</a></li>
+<li><a href="login.html">LOGIN</a></li>
+<li><a href="faq.html">FAQ</a></li>
+<li><a href="contact.html">CONTACT US</a></li>
+</ul>
+</div>
+</header>
+<div id="page">
+<h2 align="center">Registration Form</h2>
+<form name="form" action="http://localhost/WT NEW/process.php" method="post" onsubmit="return formValidate(this)" >
+<p>First Name : * <input type="text" name="firstname" ></input></p> 
+<p>Last Name : <input type="text" name="lastname" value=""></input></p>
+<p> Gender : <input type="radio" name="gender" value="Male">Male</input><input type="radio" name="gender" value="Female">Female</p>
+<p>Date of Birth : Date <select name="date"><option value="1">1</option>
+<option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option>
+<option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option>
+<option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option>
+<option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option>
+<option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option>
+<option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option>
+<option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option>
+<option value="30">30</option><option value="31">31</option>
+
+</select>
+Month <select name="month"><option value="jan">January</option>
+<option value="feb">February</option><option value="march">March</option><option value="apr">April</option>
+<option value="may">May</option><option value="june">June</option><option value="july">July</option>
+<option value="aug">August</option><option value="sept">September</option><option value="oct">October</option>
+<option value="nov">November</option><option value="dec">December</option>
+
+
+</select>
+Year <select name="year">
+<option value="1990">1990</option>
+<option value="1991">1991</option><option value="1992">1992</option><option value="1993">1993</option>
+<option value="1994">1994</option><option value="1995">1995</option><option value="1996">1996</option>
+<option value="1997">1997</option><option value="1998">1998</option><option value="1999">1999</option>
+<option value="2000">2000</option><option value="2001">2001</option><option value="2002">2002</option>
+<option value="2003">2003</option><option value="2004">2004</option><option value="2005">2005</option>
+<option value="2006">2006</option><option value="2007">2007</option><option value="2008">2008</option>
+<option value="2009">2009</option><option value="2010">2010</option><option value="2011">2011</option>
+<option value="2012">2012</option><option value="2013">2013</option><option value="2014">2014</option>
+<option value="2015">2015</option><option value="2016">2016</option><option value="2017">2017</option>
+</select>
+<p> Contact Number :  *<input type="text" name="contact" value=""></input></p>
+<p> Email-id :  *<input type="text" name="email" value=""></input></p>
+<p> Username :  *<input type="text" name="uname" value=""></input></p>
+<p> Password :  *<input type="password" name="passwd" value=""></input></p>
+<p><a href="login.html">Already a Member</a></p>
+<input type="submit" name="submission" value="SUBMIT">
+
+</form>
+</div>
+<footer>
+<div class="logo">
+<a href="https://www.twitter.com"><img src="tw.png"></a>
+<a href="https://www.facebook.com"><img src="fb.png"></a>
+<a href="https://www.instagram.com/?hl=en"><img src="insta.png"></a>
+</div>
+
+<p>Copyrights.All Rights Reserved.</p>
+<p>&copy;</p>
+</footer>
+
+</body>
+</html>

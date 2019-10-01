@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<head>
+      <title>
+Foodify
+     </title>
+
+<link href="wt1.css" rel="stylesheet" text="text/css">
+
+<script type = "text/javascript" >
+   function preventBack(){window.history.forward();}
+    setTimeout("preventBack()", 0);
+    window.onunload=function(){null};
+</script>
+   
+</head>
+<body>
+<header>
+<div class="logo">
+<img src="Foodify-slide-1.jpg" />
+</div>
+<div class="nvbar">
+<ul>
+<li><a href="home.html">HOME</a></li>
+<li><a href="register.html">REGISTER</a></li>
+<li><a href="login.html">LOGIN</a></li>
+<li><a href="faq.html">FAQ</a></li>
+<li><a href="contact.html">CONTACT US</a></li>
+</ul>
+</div>
+</header>
+
+<div id="page">
+<h2 align="center">Login</h2>
+<form name="loginform" action="http://localhost/WT NEW/process2.php" method="post">
+<p> Username : <input type="text" name="username" value=""></p>
+<p> Password : <input type="password" name="password" value=""></p>
+<input type="submit" name="submit" value="LOGIN">
+</form>
+<!--After login is successfull goto page home2.html -->
+</div>
+
+
+
+<footer>
+<div class="logo">
+<a href="https://www.twitter.com"><img src="tw.png"></a>
+<a href="https://www.facebook.com"><img src="fb.png"></a>
+<a href="https://www.instagram.com/?hl=en"><img src="insta.png"></a>
+</div>
+
+<p>Copyrights.All Rights Reserved.</p>
+<p>&copy;</p>
+</footer>
+
+</body>
+</html>

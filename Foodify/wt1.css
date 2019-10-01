@@ -1,0 +1,37 @@
+body{width:100%; padding:0px; margin:0px; background:url(4634810-food-wallpaper-background.jpg);}
+
+
+header{display:inline-block; background-color:#cd5c5c; width:1024px; color:#FFF; height:125px; margin-left:171px;}
+header .logo{display:iniline-block; height:100px; padding:10px 0px; vertical-align:middle; float:right; float:left;
+margin-left:20px;}
+header .logo img{height:100%; margin-left:50px;}
+header .nvbar{display:iniline-block; background-color:#cd5c5c; width:774px; height:50px; margin-top:75px; margin-left:250px;}
+header .nvbar ul{list-style-type: none; margin:60px;padding:0;}
+header .nvbar li{display:inline; float:left; padding:28px;}
+header .nvbar li a{background-color:#cd5c5c; color:white; text-decoration:none;}
+header .nvbar li a:hover{color:black;}
+
+#page{width:960px; height:400px; padding:32px; box-shadow:0px 0px 2px 0px #ffffff; margin:0 auto; background-color:#f2f2f2;
+margin:-4px 0px 0px 171px; overflow:scroll;}
+
+.image img{padding:20px; display:flex; margin-left:50px}
+.image1{margin-left:400px; margin-top:-860px; float:right; margin-right:40px}
+.image1 img{padding:20px; display:flex; margin-left:50px}
+
+#bbq{margin-bottom:175px;}
+#tap{margin-bottom:235px;}
+#tea{margin-bottom:300px;}
+#candies{margin-bottom:350px;}
+#faq{color:#333333;}
+.office{color:#333333;}
+.inquiry{background-color:#f2f2f2; width:250px; margin-left:390px; margin-top:-229px; color:#333333;}
+.career{background-color:#f2f2f2; width:230px; margin-left:730px; margin-top:-164px; color:#333333;}
+.table1{display:inline-block; background-color:#f2f2f2;}
+.table1 table{resize:both;overflow:auto;}
+.table1 td,th{padding:5px;color: #333333;}
+
+
+footer{display:inline-block; background-color:#cd5c5c; color:#333; width:1024px; height:58px; margin-left:171px}
+footer p{display:inline-block; font-family:PT Sans; padding:5px; letter-spacing:2px; float:right;}
+footer .logo{display:inline-block; height:45px; float:left; padding:15px;}
+footer .img{height:100%;}

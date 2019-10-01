@@ -1,0 +1,133 @@
+
+
+1. Code for finding your location on a map, 
+
+lc=LocationServices.FusedLocationApi.getLastLocation(mlc);
+        if(lc!=null)
+        {
+            mf= (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
+            mf.getMapAsync(new OnMapReadyCallback() {
+                @Override
+                public void onMapReady(GoogleMap googleMap) {
+
+                    googleMap.setMapType(GoogleMap.MAP_TYPE_TERRAIN);
+                    LatLng ll=new LatLng(lc.getLatitude(),lc.getLongitude());
+                    googleMap.addMarker(new MarkerOptions().position(ll).title("Your Current Location").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN)));
+                    googleMap.moveCamera(CameraUpdateFactory.newLatLng(ll));
+                    googleMap.animateCamera(CameraUpdateFactory.zoomTo(15));
+
+                }
+            });
+        }
+        else
+        {
+            Toast.makeText(getApplicationContext(),"Please turn on your GPS",Toast.LENGTH_LONG).show();
+        }
+
+
+2. find exact lcation text me hai
+
+ public void onConnected(Bundle bundle) {
+
+        lc=LocationServices.FusedLocationApi.getLastLocation(mlc);
+        if(lc!=null)
+        {
+            //mf= (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
+            double lat=lc.getLatitude();
+            double lon=lc.getLongitude();
+             latlngg="Latitude: "+lat+"\nLongitude: "+lon+"";
+
+            Geocoder gc=new Geocoder(this, Locale.ENGLISH);
+            try {
+                List<Address> addresses=gc.getFromLocation(lat,lon,1);
+                if(addresses!=null)
+                {
+                    Address fa=addresses.get(0);
+                    finloc=""+fa.getFeatureName()+","+fa.getSubLocality()+","+fa.getLocality()+","+fa.getPostalCode()+","+fa.getAdminArea()+","+fa.getCountryName();
+                    location.setText(finloc);
+                }
+                else{
+                    Toast.makeText(getApplicationContext(),"Problem with the Internet",Toast.LENGTH_LONG).show();
+                }
+
+
+            } catch (IOException e) {
+                Toast.makeText(getApplicationContext(),"Problem with the Internet",Toast.LENGTH_LONG).show();
+                e.printStackTrace();
+            }
+
+        }
+        else
+        {
+            Toast.makeText(getApplicationContext(),"Please turn on your GPS",Toast.LENGTH_LONG).show();
+        }
+
+    }
+
+
+
+3.  options menu sharing details
+
+ public boolean onOptionsItemSelected(MenuItem item) {
+
+        String no = "9870707997";
+        switch (item.getItemId()) {
+            case R.id.aboutus:
+                Intent intent = new Intent(Homepage.this, AboutUs.class);
+                startActivity(intent);
+                return true;
+
+            case R.id.contactus:
+                Intent i1 = new Intent(Intent.ACTION_SEND);
+                i1.putExtra(Intent.EXTRA_EMAIL, "info.annuj@gmail.com");
+                i1.putExtra(Intent.EXTRA_SUBJECT,"Emergency SOS App");
+                i1.putExtra(Intent.EXTRA_TEXT,"Enter your message here");
+                i1.setType("message/rf822");
+                startActivity(i1);
+                return true;
+
+            case R.id.share: Intent i2=new Intent();
+            i2.setAction(Intent.ACTION_SEND);
+                i2.putExtra(Intent.EXTRA_TEXT,"Hey this is an app developed by Ajay, Niraj and Annuj. Do check it out. it's an Emergency App that shares your location and also has some very cool utilities.");
+                i2.setType("text/plain");
+                startActivity(i2);
+                return true;
+
+}
+}
+
+
+4. setting up the toggler google api client for the location services
+
+GoogleApiClient.Builder builder=new GoogleApiClient.Builder(this);
+        builder.addApi(LocationServices.API);
+        builder.addConnectionCallbacks(this);
+        builder.addOnConnectionFailedListener(this);
+        mlc=builder.build();
+
+        emerbtn=findViewById(R.id.emerbtn);
+        latlngbtn=findViewById(R.id.latlngbtn);
+        location=findViewById(R.id.location);
+        drawerlayout = findViewById(R.id.drawerlayout);
+        mToggle = new ActionBarDrawerToggle(this, drawerlayout, R.string.open, R.string.close);
+
+        drawerlayout.addDrawerListener(mToggle);
+        mToggle.syncState();
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+
+
+5. mainfests different permissions
+
+ <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+
+
+6. google api key used for the app
+
+<meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyCYxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxcArYg" />

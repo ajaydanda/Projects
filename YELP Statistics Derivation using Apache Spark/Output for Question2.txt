@@ -1,0 +1,10 @@
+[1SIPUsRUtHD5kkJoV_RkRg,2520 Longview StSte 215West CampusAustin, TX 78705,List(Massage, Beauty and Spas),5.0],
+[Y6PoBIvFBzewoReq8QWOmQ,2610 Sunset BlvdWest UniversityHouston, TX 77005,List(Shopping, Home & Garden, Furniture Stores),5.0], 
+[ssJNacqLAB7cVaSXmXzZhw,University of TexasAustin, TX 78705,List(Musical Instruments & Teachers, Shopping),5.0], 
+[FdmuoDZKqGzZ0c9_zwoZQw,Central SquareCambridge, MA 02238,List(Sporting Goods, Fashion, Shopping, Sports Wear),5.0], 
+[m_XUPXKVgJr6Lo3WBYr54w,12 Arrow StSte 103Harvard SquareCambridge, MA 02138,List(Massage, Beauty and Spas),5.0], 
+[vrqDdDabgrBnwWvh_E5RSQ,2960 BroadwayMC 5727Morningside HeightsNew York, NY 10027,List(Specialty Schools, Education),5.0],
+[11NvTILA-emV1SFf_wTS9A,965 Fowler St NWWestside / Home ParkAtlanta, GA 30332,List(Stadiums & Arenas, Arts & Entertainment),5.0], 
+[Ay1y27A8V2yP_hJTNSQueA,1520 E Franklin StChapel Hill, NC 27514,List(Real Estate Services, Home Services, Real Estate),5.0], 
+[sv-yOSEionzcUzHifPtHXw,Lafayette, IN 47909,List(Home Cleaning, Professional Services, Window Washing, Office Cleaning, Home Services),5.0], 
+[4q_K6herbYxRUIV1wkA-Rw,555 10th St NWGeorgia TechAtlanta, GA 30318,List(Rehabilitation Center, Health and Medical, Physical Therapy),5.0]
